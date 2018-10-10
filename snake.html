@@ -14,6 +14,21 @@
   <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
+  <style>
+      .container-main {
+          margin-top: 30px;
+      }
+
+      .container-canvas {
+          margin: 0 auto;
+          width: 800px;
+      }
+
+      canvas {
+          border: 1px solid #333;
+          background-color: black;
+      }
+  </style>
 </head>
 
 <body>
@@ -51,16 +66,19 @@
   </nav>
   <!--/ Navigation bar-->
 
-  <section id="faculity-member" class="section-padding">
+  <section class="section-padding">
     <div class="container">
       <div class="row">
-        <div class="header-section text-center">
-          <h2>Welcome</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-          <hr class="bottom-line">
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          Hello world
+        <div class="container container-main">
+            <div class="container-canvas">
+                <div>
+                    <button id="start">Start</button>
+                    Score : <span id="score">0, Click "Start" button to start the game.</span>
+                </div>
+                <canvas id="gameCanvas" width="800" height="480">
+                    This is my fallback content.
+                </canvas>
+            </div>
         </div>
       </div>
     </div>
@@ -69,6 +87,8 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
+  <script src="games/snake/snake.js"></script>
 
 </body>
 
